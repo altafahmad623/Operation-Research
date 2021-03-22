@@ -1,0 +1,69 @@
+In the Question 3
+a. 2x_1 + 3x_2 − 2x_3 − 7x_4 = 1, x_1 + x_2 + x_3 + 3x_4 = 6, x_1 − x_2 +
+x_3 + 5x_4 = 4.
+Output : the basic solutions are
+did not converge x[0]  = -133.068 x[1]  = 148.570 x[2]  = 285.638 x[3]  = 0.000  - not feasable
+did not converge x[0]  = 1.696 x[1]  = 2.424 x[2]  = 0.000 x[3]  = 0.945  -feasable (but not convergent)
+x[0]  = 1.061 x[1]  = 0.000 x[2]  = 7.932 x[3]  = -0.999  - not feasable
+x[0]  = 0.000 x[1]  = 2.999 x[2]  = -2.991 x[3]  = 1.998  - not feasable
+
+Now solving them, we get, 
+   x_1 x_2 x_3 x_4
+1-> 2   1   3   0
+2-> 1   2   0   1
+3-> 3   0   6  -1
+4-> 0   3  -3   2  
+Here, for the 2nd case, where x_3 = 0, we are close to the solution so it may converge after further steps
+ 
+b. 2x_1 + x_2 − x_3 = 2, 2x_1 − x_2 + 5x_3 = 6, 4x_1 + x_2 + x_3 = 6.
+Output : the basic solutions are
+did not converge x[0]  = -45454545454545453056.000 x[1]  = -363636363636363624448.000 x[2]  = 545454545454545436672.000 -not feasable
+
+Now solving them, we get, 
+Here, the determinatn value is 0, so there is no solution. That's why the solution explodes in a few iterations
+
+
+c. x_1 − 3x_3 + 3x_4 = 6, x_2 − 8x_3 + 4x_4 = 4.
+Output : the basic solutions are
+x[0]  = 6.000 x[1]  = 4.000 x[2]  = 0.000 x[3]  = 0.000  -feasable
+x[0]  = 4.500 x[1]  = 0.000 x[2]  = -0.500 x[3]  = 0.000 - not feasable
+x[0]  = 3.000 x[1]  = 0.000 x[2]  = 0.000 x[3]  = 1.000 -feasable
+x[0]  = 0.000 x[1]  = -12.000 x[2]  = -2.000 x[3]  = 0.000 - not feasable
+x[0]  = 0.000 x[1]  = -4.000 x[2]  = 0.000 x[3]  = 2.000 - not feasable
+did not converge x[0]  = 0.000 x[1]  = 0.000 x[2]  = -3145727.000 x[3]  = -6291453.000 
+
+Now solving them, we get, 
+   x_1 x_2 x_3 x_4
+1-> 6   4   0   0
+2->4.5  0 -0.5  0 
+3-> 3   0   0   1 
+4-> 0  -12  -2  0
+5-> 0  -4   0   2
+6-> 0   0   1   3
+Here, the method successfully succeeds in some cases. 
+
+d. 5x_1 + 4x_2 + 2x_3 = .6, 7x_1 + 2x_2 + x_3 = .35
+Output : the basic solutions are
+did not converge x[0]  = 95530971.243 x[1]  = -334358399.176 x[2]  = 0.000 - not feasable
+did not converge x[0]  = 95530971.243 x[1]  = 0.000 x[2]  = -668716798.352 - not feasable
+did not converge x[0]  = 0.000 x[1]  = -0.350 x[2]  = 1.050 - not feasable
+
+Now solving them, we get, 
+   x_1   x_2   x_3
+  0.011 0.136  0
+  0.011   0    0.2722
+third one is not feasable
+Here, the method fails to find the solution
+
+e._2 x_1 + 2x_2 + x_3 = 24, x_1 + 2x_2 + 4x_3 = 60.
+Output : the basic solutions are
+did not converge x[0]  = -25165752.000 x[1]  = 12582906.000 x[2]  = 0.000 - not feasable
+x[0]  = 36.023 x[1]  = 0.000 x[2]  = 5.988 -feasable
+x[0]  = 0.000 x[1]  = 6.006 x[2]  = 11.997 -feasable
+
+Now solving them, we get, 
+x_1   x_2   x_3
+72    -6     0
+36     0     6
+0      6     2
+so, it didn't converge in the first case due to divergence of the method

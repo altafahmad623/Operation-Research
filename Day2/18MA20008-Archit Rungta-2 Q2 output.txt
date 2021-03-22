@@ -1,0 +1,62 @@
+Q1)
+           4               5     VALUE: 33
+           0               6     VALUE: 30
+           6               3     VALUE: 27
+           7               0     VALUE: 14
+           0               0     VALUE: 0
+The optimal value is : 33
+Obtained at:
+           4               5
+Q2)
+     70.3571         57.8571         62.8571     VALUE: 832.143
+           0         42.2222         156.667     VALUE: 1066.67
+           0              86              91     VALUE: 804
+       117.5              39               0     VALUE: 587
+           0               0         156.667     VALUE: 940
+       117.5               0               0     VALUE: 470
+           0              86               0     VALUE: 258
+           0               0               0     VALUE: 0
+The optimal value is : 1066.67
+Obtained at:
+           0         42.2222         156.667
+
+Q3)
+          40              40              20     VALUE: 1360
+           0               0               0     VALUE: 0
+           0               0               0     VALUE: 0
+           0               0               0     VALUE: 0
+          50              50               0     VALUE: 1350
+           0               0               0     VALUE: 0
+           0               0               0     VALUE: 0
+         100               0               0     VALUE: 1200
+         100               0               0     VALUE: 1200
+           0               0               0     VALUE: 0
+           0               0               0     VALUE: 0
+         100               0               0     VALUE: 1200
+           0               0               0     VALUE: 0
+The optimal value is : 1360
+Obtained at:
+          40              40              20
+
+
+Q4)
+       1.125               0          1.8125     VALUE: 6.5625
+         6.2            11.6               0     VALUE: -28.6
+     2.33333               0               0     VALUE: 2.33333
+           0               0            1.25     VALUE: 3.75
+           0         3.33333               0     VALUE: -10
+           0               0               0     VALUE: 0
+The optimal value is : -28.6
+Obtained at:
+         6.2            11.6               0
+
+Q5)
+     1.01536        0.195777        0.138196     VALUE: 3.71401
+           1        0.285714               0     VALUE: 3.57143
+           0        0.931034         0.12069     VALUE: 2.10345
+           0               1               0     VALUE: 2
+    0.783784        0.162162               0     VALUE: 2.67568
+           0            0.75               0     VALUE: 1.5
+The optimal value is : 3.71401
+Obtained at:
+     1.01536        0.195777        0.138196

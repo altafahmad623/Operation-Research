@@ -1,0 +1,890 @@
+NAME: ALTAF AHMAD
+ROLL: 18MA20005
+REVISED SIMPLEX METHOD SOLUTION
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+A. Maximize: Z = 5X1 + 10X2 + 8X3
+
+Subject to:
+3X1 + 5X2 + 2X3 ≤ 60
+4X1 + 4X2 + 4X3 ≤ 72
+2X1 + 4X2 + 5X3 ≤ 100
+X1, X2, X3 ≥ 0
+
+Enter n (no. of variables) : 3
+Enter m (no. of equations) : 3
+Enter the coefficient of x1 in Z :
+5
+Enter the coefficient of x2 in Z :
+10
+Enter the coefficient of x3 in Z :
+8
+Enter the coefficient of x1 in equation 1
+3
+Enter the coefficient of x2 in equation 1
+5
+Enter the coefficient of x3 in equation 1
+2
+Enter the coefficient of x1 in equation 2
+4
+Enter the coefficient of x2 in equation 2
+4
+Enter the coefficient of x3 in equation 2
+4
+Enter the coefficient of x1 in equation 3
+2
+Enter the coefficient of x2 in equation 3
+4
+Enter the coefficient of x3 in equation 3
+5
+Enter the value of b1 in AX= b
+60
+Enter the value of b2 in AX= b
+72
+Enter the value of b3 in AX= b
+100
+The initial table is :
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |   b |
+|------+------+-------+-------+-------+-------+-------+-------+-----|
+|    0 |    4 |     3 |     5 |     2 |     1 |     0 |     0 |  60 |
+|    0 |    5 |     4 |     4 |     4 |     0 |     1 |     0 |  72 |
+|    0 |    6 |     2 |     4 |     5 |     0 |     0 |     1 | 100 |
+
+
+The basic variables are : [4 5 6]
+With the coefficients C_b : [0. 0. 0.]
+And X_B = [ 60.  72. 100.]
+The non-basic variables are : [1 2 3]
+B : 
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+B^{-1} : 
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+y = C_b.B^{-1} = [0. 0. 0.]
+P1 = [3. 4. 2.]
+Now, C1 - Z1 = C1 - yP1
+=5.0
+P2 = [5. 4. 4.]
+Now, C2 - Z2 = C2 - yP2
+=10.0
+P3 = [2. 4. 5.]
+Now, C3 - Z3 = C3 - yP3
+=8.0
+
+The maximum value of Cj - Zj is :10.0
+
+So the entering variable is 2
+
+ Iteration : 1
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |   b |
+|------+------+-------+-------+-------+-------+-------+-------+-----|
+|    0 |    4 |     3 |     5 |     2 |     1 |     0 |     0 |  60 |
+|    0 |    5 |     4 |     4 |     4 |     0 |     1 |     0 |  72 |
+|    0 |    6 |     2 |     4 |     5 |     0 |     0 |     1 | 100 |
+
+
+Now, Pbar_j = B^{-1} Pj = [5. 4. 4.]
+So, we divide X_B by Pbar_j to get
+[12. 18. 25.]
+Here the minimum value of the matrix is 12.0
+So, the leaving variable is 4
+The basic variables are : [2 5 6]
+With the coefficients C_b : [10.  0.  0.]
+And X_B = [12. 24. 52.]
+The non-basic variables are : [1 4 3]
+B : 
+[[5. 0. 0.]
+ [4. 1. 0.]
+ [4. 0. 1.]]
+B^{-1} : 
+[[ 0.2  0.   0. ]
+ [-0.8  1.   0. ]
+ [-0.8  0.   1. ]]
+y = C_b.B^{-1} = [2. 0. 0.]
+P1 = [3. 4. 2.]
+Now, C1 - Z1 = C1 - yP1
+=-1.0
+P4 = [1. 0. 0.]
+Now, C4 - Z4 = C4 - yP4
+=-2.0
+P3 = [2. 4. 5.]
+Now, C3 - Z3 = C3 - yP3
+=4.0
+
+The maximum value of Cj - Zj is :4.0
+
+So the entering variable is 3
+
+ Iteration : 2
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |   b |
+|------+------+-------+-------+-------+-------+-------+-------+-----|
+|   10 |    2 |     3 |     5 |     2 |     1 |     0 |     0 |  12 |
+|    0 |    5 |     4 |     4 |     4 |     0 |     1 |     0 |  24 |
+|    0 |    6 |     2 |     4 |     5 |     0 |     0 |     1 |  52 |
+
+
+Now, Pbar_j = B^{-1} Pj = [0.4 2.4 3.4]
+So, we divide X_B by Pbar_j to get
+[30.         10.         15.29411765]
+Here the minimum value of the matrix is 10.0
+So, the leaving variable is 5
+The basic variables are : [2 3 6]
+With the coefficients C_b : [10.  8.  0.]
+And X_B = [ 8. 10. 18.]
+The non-basic variables are : [1 4 5]
+B : 
+[[5. 2. 0.]
+ [4. 4. 0.]
+ [4. 5. 1.]]
+B^{-1} : 
+[[ 0.33333333 -0.16666667  0.        ]
+ [-0.33333333  0.41666667  0.        ]
+ [ 0.33333333 -1.41666667  1.        ]]
+y = C_b.B^{-1} = [0.66666667 1.66666667 0.        ]
+P1 = [3. 4. 2.]
+Now, C1 - Z1 = C1 - yP1
+=-3.666666666666666
+P4 = [1. 0. 0.]
+Now, C4 - Z4 = C4 - yP4
+=-0.6666666666666665
+P5 = [0. 1. 0.]
+Now, C5 - Z5 = C5 - yP5
+=-1.6666666666666665
+The solution is :
+x2 = 8.0
+x3 = 10.0
+x6 = 18.0
+And the rest of the values are 0.
+And the value of Z is : 160.0
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+B. Maximize: Z = 4X1 + 3X2
+
+Subject to:
+2X1 + 1X2 ≤ 1000
+1X1 + 1X2 ≤ 800
+1X1 + 0X2 ≤ 400
+0X1 + 1X2 ≤ 700
+X1, X2 ≥ 0
+
+Enter n (no. of variables) : 2
+Enter m (no. of equations) : 4
+Enter the coefficient of x1 in Z :
+4
+Enter the coefficient of x2 in Z :
+3
+Enter the coefficient of x1 in equation 1
+2
+Enter the coefficient of x2 in equation 1
+1
+Enter the coefficient of x1 in equation 2
+1
+Enter the coefficient of x2 in equation 2
+1
+Enter the coefficient of x1 in equation 3
+1
+Enter the coefficient of x2 in equation 3
+0
+Enter the coefficient of x1 in equation 4
+0
+Enter the coefficient of x2 in equation 4
+1
+Enter the value of b1 in AX= b
+1000
+Enter the value of b2 in AX= b
+800
+Enter the value of b3 in AX= b
+400
+Enter the value of b4 in AX= b
+700
+The initial table is :
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |    b |
+|------+------+-------+-------+-------+-------+-------+-------+------|
+|    0 |    3 |     2 |     1 |     1 |     0 |     0 |     0 | 1000 |
+|    0 |    4 |     1 |     1 |     0 |     1 |     0 |     0 |  800 |
+|    0 |    5 |     1 |     0 |     0 |     0 |     1 |     0 |  400 |
+|    0 |    6 |     0 |     1 |     0 |     0 |     0 |     1 |  700 |
+
+
+The basic variables are : [3 4 5 6]
+With the coefficients C_b : [0. 0. 0. 0.]
+And X_B = [1000.  800.  400.  700.]
+The non-basic variables are : [1 2]
+B : 
+[[1. 0. 0. 0.]
+ [0. 1. 0. 0.]
+ [0. 0. 1. 0.]
+ [0. 0. 0. 1.]]
+B^{-1} : 
+[[1. 0. 0. 0.]
+ [0. 1. 0. 0.]
+ [0. 0. 1. 0.]
+ [0. 0. 0. 1.]]
+y = C_b.B^{-1} = [0. 0. 0. 0.]
+P1 = [2. 1. 1. 0.]
+Now, C1 - Z1 = C1 - yP1
+=4.0
+P2 = [1. 1. 0. 1.]
+Now, C2 - Z2 = C2 - yP2
+=3.0
+
+The maximum value of Cj - Zj is :4.0
+
+So the entering variable is 1
+
+ Iteration : 1
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |    b |
+|------+------+-------+-------+-------+-------+-------+-------+------|
+|    0 |    3 |     2 |     1 |     1 |     0 |     0 |     0 | 1000 |
+|    0 |    4 |     1 |     1 |     0 |     1 |     0 |     0 |  800 |
+|    0 |    5 |     1 |     0 |     0 |     0 |     1 |     0 |  400 |
+|    0 |    6 |     0 |     1 |     0 |     0 |     0 |     1 |  700 |
+
+
+Now, Pbar_j = B^{-1} Pj = [2. 1. 1. 0.]
+So, we divide X_B by Pbar_j to get
+[500. 800. 400.  inf]
+Here the minimum value of the matrix is 400.0
+So, the leaving variable is 5
+The basic variables are : [3 4 1 6]
+With the coefficients C_b : [0. 0. 4. 0.]
+And X_B = [200. 400. 400. 700.]
+The non-basic variables are : [5 2]
+B : 
+[[1. 0. 2. 0.]
+ [0. 1. 1. 0.]
+ [0. 0. 1. 0.]
+ [0. 0. 0. 1.]]
+B^{-1} : 
+[[ 1.  0. -2.  0.]
+ [ 0.  1. -1.  0.]
+ [ 0.  0.  1.  0.]
+ [ 0.  0.  0.  1.]]
+y = C_b.B^{-1} = [0. 0. 4. 0.]
+P5 = [0. 0. 1. 0.]
+Now, C5 - Z5 = C5 - yP5
+=-4.0
+P2 = [1. 1. 0. 1.]
+Now, C2 - Z2 = C2 - yP2
+=3.0
+
+The maximum value of Cj - Zj is :3.0
+
+So the entering variable is 2
+
+ Iteration : 2
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |   b |
+|------+------+-------+-------+-------+-------+-------+-------+-----|
+|    0 |    3 |     2 |     1 |     1 |     0 |     0 |     0 | 200 |
+|    0 |    4 |     1 |     1 |     0 |     1 |     0 |     0 | 400 |
+|    4 |    1 |     1 |     0 |     0 |     0 |     1 |     0 | 400 |
+|    0 |    6 |     0 |     1 |     0 |     0 |     0 |     1 | 700 |
+
+
+Now, Pbar_j = B^{-1} Pj = [1. 1. 0. 1.]
+So, we divide X_B by Pbar_j to get
+[200. 400.  inf 700.]
+Here the minimum value of the matrix is 200.0
+So, the leaving variable is 3
+The basic variables are : [2 4 1 6]
+With the coefficients C_b : [3. 0. 4. 0.]
+And X_B = [200. 200. 400. 500.]
+The non-basic variables are : [5 3]
+B : 
+[[1. 0. 2. 0.]
+ [1. 1. 1. 0.]
+ [0. 0. 1. 0.]
+ [1. 0. 0. 1.]]
+B^{-1} : 
+[[ 1.  0. -2.  0.]
+ [-1.  1.  1.  0.]
+ [-0. -0.  1. -0.]
+ [-1.  0.  2.  1.]]
+y = C_b.B^{-1} = [ 3.  0. -2.  0.]
+P5 = [0. 0. 1. 0.]
+Now, C5 - Z5 = C5 - yP5
+=2.0
+P3 = [1. 0. 0. 0.]
+Now, C3 - Z3 = C3 - yP3
+=-3.0
+
+The maximum value of Cj - Zj is :2.0
+
+So the entering variable is 5
+
+ Iteration : 3
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |   b |
+|------+------+-------+-------+-------+-------+-------+-------+-----|
+|    3 |    2 |     2 |     1 |     1 |     0 |     0 |     0 | 200 |
+|    0 |    4 |     1 |     1 |     0 |     1 |     0 |     0 | 200 |
+|    4 |    1 |     1 |     0 |     0 |     0 |     1 |     0 | 400 |
+|    0 |    6 |     0 |     1 |     0 |     0 |     0 |     1 | 500 |
+
+
+Now, Pbar_j = B^{-1} Pj = [-2.  1.  1.  2.]
+So, we divide X_B by Pbar_j to get
+[-100.  200.  400.  250.]
+Here the minimum value of the matrix is 200.0
+So, the leaving variable is 4
+The basic variables are : [2 5 1 6]
+With the coefficients C_b : [3. 0. 4. 0.]
+And X_B = [600. 200. 200. 100.]
+The non-basic variables are : [4 3]
+B : 
+[[1. 0. 2. 0.]
+ [1. 0. 1. 0.]
+ [0. 1. 1. 0.]
+ [1. 0. 0. 1.]]
+B^{-1} : 
+[[-1.  2.  0.  0.]
+ [-1.  1.  1.  0.]
+ [ 1. -1. -0. -0.]
+ [ 1. -2. -0.  1.]]
+y = C_b.B^{-1} = [1. 2. 0. 0.]
+P4 = [0. 1. 0. 0.]
+Now, C4 - Z4 = C4 - yP4
+=-2.0
+P3 = [1. 0. 0. 0.]
+Now, C3 - Z3 = C3 - yP3
+=-1.0
+The solution is :
+x2 = 600.0
+x5 = 200.0
+x1 = 200.0
+x6 = 100.0
+And the rest of the values are 0.
+And the value of Z is : 2600.0
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+C. Maximize: Z = 3X1 + 3X2 + 2X3 + 1X4
+
+Subject to:
+2X1 + 2X2 + 5X3 + 1X4 ≤ 12
+3X1 + 3X2 + 4X3 + 0X4 ≤ 11
+X1, X2, X3, X4 ≥ 0
+
+Enter n (no. of variables) : 4
+Enter m (no. of equations) : 2
+Enter the coefficient of x1 in Z :
+3
+Enter the coefficient of x2 in Z :
+3
+Enter the coefficient of x3 in Z :
+2
+Enter the coefficient of x4 in Z :
+1
+Enter the coefficient of x1 in equation 1
+2
+Enter the coefficient of x2 in equation 1
+2
+Enter the coefficient of x3 in equation 1
+5
+Enter the coefficient of x4 in equation 1
+1
+Enter the coefficient of x1 in equation 2
+3
+Enter the coefficient of x2 in equation 2
+3
+Enter the coefficient of x3 in equation 2
+4
+Enter the coefficient of x4 in equation 2
+0
+Enter the value of b1 in AX= b
+12
+Enter the value of b2 in AX= b
+11
+The initial table is :
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |   b |
+|------+------+-------+-------+-------+-------+-------+-------+-----|
+|    0 |    5 |     2 |     2 |     5 |     1 |     1 |     0 |  12 |
+|    0 |    6 |     3 |     3 |     4 |     0 |     0 |     1 |  11 |
+
+
+The basic variables are : [5 6]
+With the coefficients C_b : [0. 0.]
+And X_B = [12. 11.]
+The non-basic variables are : [1 2 3 4]
+B : 
+[[1. 0.]
+ [0. 1.]]
+B^{-1} : 
+[[1. 0.]
+ [0. 1.]]
+y = C_b.B^{-1} = [0. 0.]
+P1 = [2. 3.]
+Now, C1 - Z1 = C1 - yP1
+=3.0
+P2 = [2. 3.]
+Now, C2 - Z2 = C2 - yP2
+=3.0
+P3 = [5. 4.]
+Now, C3 - Z3 = C3 - yP3
+=2.0
+P4 = [1. 0.]
+Now, C4 - Z4 = C4 - yP4
+=1.0
+
+The maximum value of Cj - Zj is :3.0
+
+So the entering variable is 1
+
+ Iteration : 1
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |   b |
+|------+------+-------+-------+-------+-------+-------+-------+-----|
+|    0 |    5 |     2 |     2 |     5 |     1 |     1 |     0 |  12 |
+|    0 |    6 |     3 |     3 |     4 |     0 |     0 |     1 |  11 |
+
+
+Now, Pbar_j = B^{-1} Pj = [2. 3.]
+So, we divide X_B by Pbar_j to get
+[6.         3.66666667]
+Here the minimum value of the matrix is 3.6666666666666665
+So, the leaving variable is 6
+The basic variables are : [5 1]
+With the coefficients C_b : [0. 3.]
+And X_B = [4.66666667 3.66666667]
+The non-basic variables are : [6 2 3 4]
+B : 
+[[1. 2.]
+ [0. 3.]]
+B^{-1} : 
+[[ 1.         -0.66666667]
+ [ 0.          0.33333333]]
+y = C_b.B^{-1} = [0. 1.]
+P6 = [0. 1.]
+Now, C6 - Z6 = C6 - yP6
+=-1.0
+P2 = [2. 3.]
+Now, C2 - Z2 = C2 - yP2
+=0.0
+P3 = [5. 4.]
+Now, C3 - Z3 = C3 - yP3
+=-2.0
+P4 = [1. 0.]
+Now, C4 - Z4 = C4 - yP4
+=1.0
+
+The maximum value of Cj - Zj is :1.0
+
+So the entering variable is 4
+
+ Iteration : 2
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |       b |
+|------+------+-------+-------+-------+-------+-------+-------+---------|
+|    0 |    5 |     2 |     2 |     5 |     1 |     1 |     0 | 4.66667 |
+|    3 |    1 |     3 |     3 |     4 |     0 |     0 |     1 | 3.66667 |
+
+
+Now, Pbar_j = B^{-1} Pj = [1. 0.]
+So, we divide X_B by Pbar_j to get
+[4.66666667        inf]
+Here the minimum value of the matrix is 4.666666666666667
+So, the leaving variable is 5
+The basic variables are : [4 1]
+With the coefficients C_b : [1. 3.]
+And X_B = [4.66666667 3.66666667]
+The non-basic variables are : [6 2 3 5]
+B : 
+[[1. 2.]
+ [0. 3.]]
+B^{-1} : 
+[[ 1.         -0.66666667]
+ [ 0.          0.33333333]]
+y = C_b.B^{-1} = [1.         0.33333333]
+P6 = [0. 1.]
+Now, C6 - Z6 = C6 - yP6
+=-0.33333333333333337
+P2 = [2. 3.]
+Now, C2 - Z2 = C2 - yP2
+=0.0
+P3 = [5. 4.]
+Now, C3 - Z3 = C3 - yP3
+=-4.333333333333334
+P5 = [1. 0.]
+Now, C5 - Z5 = C5 - yP5
+=-1.0
+The solution is :
+x4 = 4.666666666666667
+x1 = 3.6666666666666665
+And the rest of the values are 0.
+And the value of Z is : 15.666666666666668
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+D. Maximize: Z = 3X1 + 5X2 + 4X3
+
+Subject to:
+2X1 + 3X2 + 0X3 ≤ 8
+0X1 + 2X2 + 5X3 ≤ 10
+3X1 + 2X2 + 4X3 ≤ 15
+X1, X2, X3 ≥ 0
+
+
+Enter n (no. of variables) : 3
+Enter m (no. of equations) : 3
+Enter the coefficient of x1 in Z :
+3
+Enter the coefficient of x2 in Z :
+5
+Enter the coefficient of x3 in Z :
+4
+Enter the coefficient of x1 in equation 1
+2
+Enter the coefficient of x2 in equation 1
+3
+Enter the coefficient of x3 in equation 1
+0
+Enter the coefficient of x1 in equation 2
+0
+Enter the coefficient of x2 in equation 2
+2
+Enter the coefficient of x3 in equation 2
+5
+Enter the coefficient of x1 in equation 3
+3
+Enter the coefficient of x2 in equation 3
+2
+Enter the coefficient of x3 in equation 3
+4
+Enter the value of b1 in AX= b
+8
+Enter the value of b2 in AX= b
+10
+Enter the value of b3 in AX= b
+15
+The initial table is :
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |   b |
+|------+------+-------+-------+-------+-------+-------+-------+-----|
+|    0 |    4 |     2 |     3 |     0 |     1 |     0 |     0 |   8 |
+|    0 |    5 |     0 |     2 |     5 |     0 |     1 |     0 |  10 |
+|    0 |    6 |     3 |     2 |     4 |     0 |     0 |     1 |  15 |
+
+
+The basic variables are : [4 5 6]
+With the coefficients C_b : [0. 0. 0.]
+And X_B = [ 8. 10. 15.]
+The non-basic variables are : [1 2 3]
+B : 
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+B^{-1} : 
+[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]
+y = C_b.B^{-1} = [0. 0. 0.]
+P1 = [2. 0. 3.]
+Now, C1 - Z1 = C1 - yP1
+=3.0
+P2 = [3. 2. 2.]
+Now, C2 - Z2 = C2 - yP2
+=5.0
+P3 = [0. 5. 4.]
+Now, C3 - Z3 = C3 - yP3
+=4.0
+
+The maximum value of Cj - Zj is :5.0
+
+So the entering variable is 2
+
+ Iteration : 1
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |   b |
+|------+------+-------+-------+-------+-------+-------+-------+-----|
+|    0 |    4 |     2 |     3 |     0 |     1 |     0 |     0 |   8 |
+|    0 |    5 |     0 |     2 |     5 |     0 |     1 |     0 |  10 |
+|    0 |    6 |     3 |     2 |     4 |     0 |     0 |     1 |  15 |
+
+
+Now, Pbar_j = B^{-1} Pj = [3. 2. 2.]
+So, we divide X_B by Pbar_j to get
+[2.66666667 5.         7.5       ]
+Here the minimum value of the matrix is 2.6666666666666665
+So, the leaving variable is 4
+The basic variables are : [2 5 6]
+With the coefficients C_b : [5. 0. 0.]
+And X_B = [2.66666667 4.66666667 9.66666667]
+The non-basic variables are : [1 4 3]
+B : 
+[[3. 0. 0.]
+ [2. 1. 0.]
+ [2. 0. 1.]]
+B^{-1} : 
+[[ 0.33333333  0.          0.        ]
+ [-0.66666667  1.          0.        ]
+ [-0.66666667  0.          1.        ]]
+y = C_b.B^{-1} = [1.66666667 0.         0.        ]
+P1 = [2. 0. 3.]
+Now, C1 - Z1 = C1 - yP1
+=-0.33333333333333304
+P4 = [1. 0. 0.]
+Now, C4 - Z4 = C4 - yP4
+=-1.6666666666666665
+P3 = [0. 5. 4.]
+Now, C3 - Z3 = C3 - yP3
+=4.0
+
+The maximum value of Cj - Zj is :4.0
+
+So the entering variable is 3
+
+ Iteration : 2
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |       b |
+|------+------+-------+-------+-------+-------+-------+-------+---------|
+|    5 |    2 |     2 |     3 |     0 |     1 |     0 |     0 | 2.66667 |
+|    0 |    5 |     0 |     2 |     5 |     0 |     1 |     0 | 4.66667 |
+|    0 |    6 |     3 |     2 |     4 |     0 |     0 |     1 | 9.66667 |
+
+
+Now, Pbar_j = B^{-1} Pj = [0. 5. 4.]
+So, we divide X_B by Pbar_j to get
+[       inf 0.93333333 2.41666667]
+Here the minimum value of the matrix is 0.9333333333333333
+So, the leaving variable is 5
+The basic variables are : [2 3 6]
+With the coefficients C_b : [5. 4. 0.]
+And X_B = [2.66666667 0.93333333 5.93333333]
+The non-basic variables are : [1 4 5]
+B : 
+[[3. 0. 0.]
+ [2. 5. 0.]
+ [2. 4. 1.]]
+B^{-1} : 
+[[ 0.33333333  0.          0.        ]
+ [-0.13333333  0.2         0.        ]
+ [-0.13333333 -0.8         1.        ]]
+y = C_b.B^{-1} = [1.13333333 0.8        0.        ]
+P1 = [2. 0. 3.]
+Now, C1 - Z1 = C1 - yP1
+=0.7333333333333334
+P4 = [1. 0. 0.]
+Now, C4 - Z4 = C4 - yP4
+=-1.1333333333333333
+P5 = [0. 1. 0.]
+Now, C5 - Z5 = C5 - yP5
+=-0.8
+
+The maximum value of Cj - Zj is :0.7333333333333334
+
+So the entering variable is 1
+
+ Iteration : 3
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |        b |
+|------+------+-------+-------+-------+-------+-------+-------+----------|
+|    5 |    2 |     2 |     3 |     0 |     1 |     0 |     0 | 2.66667  |
+|    4 |    3 |     0 |     2 |     5 |     0 |     1 |     0 | 0.933333 |
+|    0 |    6 |     3 |     2 |     4 |     0 |     0 |     1 | 5.93333  |
+
+
+Now, Pbar_j = B^{-1} Pj = [ 0.66666667 -0.26666667  2.73333333]
+So, we divide X_B by Pbar_j to get
+[ 4.         -3.5         2.17073171]
+Here the minimum value of the matrix is 2.1707317073170733
+So, the leaving variable is 6
+The basic variables are : [2 3 1]
+With the coefficients C_b : [5. 4. 3.]
+And X_B = [1.2195122  1.51219512 2.17073171]
+The non-basic variables are : [6 4 5]
+B : 
+[[3. 0. 2.]
+ [2. 5. 0.]
+ [2. 4. 3.]]
+B^{-1} : 
+[[ 0.36585366  0.19512195 -0.24390244]
+ [-0.14634146  0.12195122  0.09756098]
+ [-0.04878049 -0.29268293  0.36585366]]
+y = C_b.B^{-1} = [1.09756098 0.58536585 0.26829268]
+P6 = [0. 0. 1.]
+Now, C6 - Z6 = C6 - yP6
+=-0.2682926829268294
+P4 = [1. 0. 0.]
+Now, C4 - Z4 = C4 - yP4
+=-1.097560975609756
+P5 = [0. 1. 0.]
+Now, C5 - Z5 = C5 - yP5
+=-0.5853658536585367
+The solution is :
+x2 = 1.219512195121951
+x3 = 1.5121951219512195
+x1 = 2.1707317073170733
+And the rest of the values are 0.
+And the value of Z is : 18.65853658536585
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+E. Minimize: Z = 3X1 + 3X2 + 2X3 - 1X4
+
+Subject to:
+2X1 + 2X2 + 5X3 + 1X4 ≥ 43
+3X1 - 3X2 + 4X3 + 0X4 ≥ 11
+4X1 - 2X2 + 3X3 - 1X4 ≥ 25
+X1, X2, X3, X4 ≥ 0
+
+Now, we need to convert the primal equation to dual :
+ The primal is to be input as first the Z which could be maximum that will be the opposite in the dual
+And also, all the inequations should be in the form 
+ a_11 x_1 + a_12 x_2 + ... + a_1n x_n < = b_1
+a_21 x_1 + a_22 x_2 + ... + a_2n x_n < = b_2 
+  --------------------------------
+ a_m1 x_1 + a_m2 x_2 + ... + a_mn x_n < = b_m
+Enter A[0][0] :2
+Enter A[0][1] :2
+Enter A[0][2] :5
+Enter A[0][3] :1
+Enter A[1][0] :3
+Enter A[1][1] :-3
+Enter A[1][2] :4
+Enter A[1][3] :0
+Enter A[2][0] :4
+Enter A[2][1] :-2
+Enter A[2][2] :3
+Enter A[2][3] :-1
+Now, enter the values of B
+Enter B[0] :43
+Enter B[1] :11
+Enter B[2] :25
+Now enter the coefficients of the optimality Z = c1 . x_1 + c2 . x_2 .. + cn . x_n;  so enter c1,c2...,cn
+Enter coefficient of x_1 :3
+Enter coefficient of x_2 :3
+Enter coefficient of x_3 :2
+Enter coefficient of x_4 :-1
+Converting it to dual we get - Max:  Z = 43.00 x_1 + 11.00 x_2 + 25.00 x_3
+Subject to : 
+2.00 x_1 + 3.00 x_2 + 4.00 x_3 <= 3.000000 
+2.00 x_1 + -3.00 x_2 + -2.00 x_3 <= 3.000000 
+5.00 x_1 + 4.00 x_2 + 3.00 x_3 <= 2.000000 
+1.00 x_1 + 0.00 x_2 + -1.00 x_3 <= -1.000000 
+
+Now, solving it using revised simplex method : 
+
+Enter n (no. of variables) : 3
+Enter m (no. of equations) : 4
+Enter the coefficient of x1 in Z :
+43
+Enter the coefficient of x2 in Z :
+11
+Enter the coefficient of x3 in Z :
+25
+Enter the coefficient of x1 in equation 1
+2
+Enter the coefficient of x2 in equation 1
+3
+Enter the coefficient of x3 in equation 1
+4
+Enter the coefficient of x1 in equation 2
+2
+Enter the coefficient of x2 in equation 2
+-3
+Enter the coefficient of x3 in equation 2
+-2
+Enter the coefficient of x1 in equation 3
+5
+Enter the coefficient of x2 in equation 3
+4
+Enter the coefficient of x3 in equation 3
+3
+Enter the coefficient of x1 in equation 4
+1
+Enter the coefficient of x2 in equation 4
+0
+Enter the coefficient of x3 in equation 4
+-1
+Enter the value of b1 in AX= b
+3
+Enter the value of b2 in AX= b
+3
+Enter the value of b3 in AX= b
+2
+Enter the value of b4 in AX= b
+-1
+The initial table is :
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |   x_7 |   b |
+|------+------+-------+-------+-------+-------+-------+-------+-------+-----|
+|    0 |    4 |     2 |     3 |     4 |     1 |     0 |     0 |     0 |   3 |
+|    0 |    5 |     2 |    -3 |    -2 |     0 |     1 |     0 |     0 |   3 |
+|    0 |    6 |     5 |     4 |     3 |     0 |     0 |     1 |     0 |   2 |
+|    0 |    7 |     1 |     0 |    -1 |     0 |     0 |     0 |     1 |  -1 |
+
+
+The basic variables are : [4 5 6 7]
+With the coefficients C_b : [0. 0. 0. 0.]
+And X_B = [ 3.  3.  2. -1.]
+The non-basic variables are : [1 2 3]
+B : 
+[[1. 0. 0. 0.]
+ [0. 1. 0. 0.]
+ [0. 0. 1. 0.]
+ [0. 0. 0. 1.]]
+B^{-1} : 
+[[1.0, 0.0, 0.0, 0.0], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, 0.0], [0.0, 0.0, 0.0, 1.0]]
+y = C_b.B^{-1} = [0. 0. 0. 0.]
+P1 = [2. 2. 5. 1.]
+Now, C1 - Z1 = C1 - yP1
+=43.0
+P2 = [ 3. -3.  4.  0.]
+Now, C2 - Z2 = C2 - yP2
+=11.0
+P3 = [ 4. -2.  3. -1.]
+Now, C3 - Z3 = C3 - yP3
+=25.0
+
+The maximum value of Cj - Zj is :43.0
+
+So the entering variable is 1
+
+ Iteration : 1
+|   CB |   BV |   x_1 |   x_2 |   x_3 |   x_4 |   x_5 |   x_6 |   x_7 |   b |
+|------+------+-------+-------+-------+-------+-------+-------+-------+-----|
+|    0 |    4 |     2 |     3 |     4 |     1 |     0 |     0 |     0 |   3 |
+|    0 |    5 |     2 |    -3 |    -2 |     0 |     1 |     0 |     0 |   3 |
+|    0 |    6 |     5 |     4 |     3 |     0 |     0 |     1 |     0 |   2 |
+|    0 |    7 |     1 |     0 |    -1 |     0 |     0 |     0 |     1 |  -1 |
+
+
+Now, Pbar_j = B^{-1} Pj = [2. 2. 5. 1.]
+So, we divide X_B by Pbar_j to get
+[ 1.5  1.5  0.4 -1. ]
+Here the minimum value of the matrix is 0.4
+So, the leaving variable is 6
+The basic variables are : [4 5 1 7]
+With the coefficients C_b : [ 0.  0. 43.  0.]
+And X_B = [ 2.2  2.2  0.4 -1.4]
+The non-basic variables are : [6 2 3]
+B : 
+[[1. 0. 2. 0.]
+ [0. 1. 2. 0.]
+ [0. 0. 5. 0.]
+ [0. 0. 1. 1.]]
+B^{-1} : 
+[[1.0, 0.0, -0.4, 0.0], [0.0, 1.0, -0.4, 0.0], [0.0, 0.0, 0.2, 0.0], [0.0, 0.0, -0.2, 1.0]]
+y = C_b.B^{-1} = [0.  0.  8.6 0. ]
+P6 = [0. 0. 1. 0.]
+Now, C6 - Z6 = C6 - yP6
+=-8.6
+P2 = [ 3. -3.  4.  0.]
+Now, C2 - Z2 = C2 - yP2
+=-23.4
+P3 = [ 4. -2.  3. -1.]
+Now, C3 - Z3 = C3 - yP3
+=-0.7999999999999972
+
+
+It is unbounded
+
+
