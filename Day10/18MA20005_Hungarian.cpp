@@ -67,16 +67,20 @@ int hungarian(int **arr, int n) // method to implement the  hungarian method
         rowmin[i] = minpk;
     }
     //subtracting row minimum
+    cout<<"The row minima is : ";
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
         {
             A[i][j] -= rowmin[i];
+            
         }
+        cout<<"\t" << rowmin[i];
     }
-    cout << "After subtracting row minima we get\n";
+    cout << "\nAfter subtracting row minima we get\n";
     printTable(A, n);
     //subtracting column minima
+    cout<<"The column minima is : ";
     for (int j = 0; j < n; j++)
     {
         minpk = bM;
@@ -225,6 +229,8 @@ int hungarian(int **arr, int n) // method to implement the  hungarian method
             
             for (int i = 0; i < n; i++)
             {
+                //if(i == 2)
+                 //   continue;
                 numzeroes = 0;
                 for (int j = 0; j < n; j++)
                 {
@@ -319,6 +325,7 @@ int hungarian(int **arr, int n) // method to implement the  hungarian method
                     }
                 }
             }
+            cout<<"The minimum uncovered element is : "<<minpk<<"\nThis will be subtracted and added in the required cells now\n";
             for (int i = 0; i < horline.size(); i++)
             {
                 for (int j = 0; j < verline.size(); j++)

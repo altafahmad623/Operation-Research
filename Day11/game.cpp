@@ -419,7 +419,7 @@ void printTable(int **arr, int n, int m, int *rowmin, int *columnmax) // helper 
     }
     cout << "\n";
 }
-void printTable(double **arr, int n, int m, int *rowmin, int *columnmax) // overload the table to get it
+void printTable(double **arr, int n, int m, int *rowmin, int *columnmax)
 {
     cout << "\n";
     cout << "\t\tB's Strategy\n\t";
@@ -511,8 +511,6 @@ int stable_game(int **arr, int n, int m) // this function calculates the min max
     printTable(arr, n, m, rowmin, columnmax);
     int maxmin = maxArray(rowmin, m); // maxmin is the maximum element of all the minimum rows
     int minmax = minArray(columnmax, n), k1, k2; // and minmax is the minimum element of all the maximum columns
-    int minmin = minArray(rowmin, m);
-    int k3 = rowmin[minmin];
     k1 = rowmin[maxmin];
     k2 = columnmax[minmax];
     cout << "\n Max-Min = " << k1 << " , and Min-Max = " << k2 << "\n";
@@ -522,17 +520,8 @@ int stable_game(int **arr, int n, int m) // this function calculates the min max
     }
     else // the game is not stable 
     {
-        int c;
         cout << "This game does not possess a saddle point (game is unstable)\nThe value of the game will lie between " << k1 << " and " << k2 << "\n";
-        if(k3 < 0 )
-        {
-            c = (-1) * k3;
-        }
-        else
-        {
-            c = 0;
-        }
-        
+        int c = k2 + 2;
         cout << "We are adding " << c << " to each element of the table \n"; // this is done to remove the negative elements if any
         for (int i = 0; i < m; i++)
         {

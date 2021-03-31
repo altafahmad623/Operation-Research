@@ -1,0 +1,63 @@
+enter no of row :enter no of column :enter cost Metrix :
+enter 1 row :enter 2 row :enter 3 row :enter 4 row :enter 5 row :
+
+Original table
+
+15	18	1	40	93	
+86	86	85	86	86	
+19	19	79	54	78	
+56	80	35	27	14	
+54	53	47	99	42	
+
+-----------------------------------
+
+table after subtracting min of rows
+
+14 	17 	0 	39 	92 	
+1 	1 	0 	1 	1 	
+0 	0 	60 	35 	59 	
+42 	66 	21 	13 	0 	
+12 	11 	5 	57 	0 	
+
+-----------------------------------
+
+table after subtracting min of col
+
+14	 17	 0	 38	 92	 
+1	 1	 0	 0	 1	 
+0	 0	 60	 34	 59	 
+42	 66	 21	 12	 0	 
+12	 11	 5	 56	 0	 
+
+-----------------------------------
+loop start
+
+
+
+table after each iteration
+
+14 	17 	0 	38 	97 	
+1 	1 	0 	0 	6 	
+0 	0 	60 	34 	64 	
+37 	61 	16 	7 	0 	
+7 	6 	0 	51 	0 	
+
+-----------------------------------
+
+table after each iteration
+
+8 	11 	0 	32 	97 	
+1 	1 	6 	0 	12 	
+0 	0 	66 	34 	70 	
+31 	55 	16 	1 	0 	
+1	0 	0 	45 	0 	
+
+-----------------------------------
+optiaml value reached
+
+Opterator : 1, job : 3, time = 1
+Opterator : 4, job : 5, time = 14
+Opterator : 2, job : 4, time = 86
+Opterator : 3, job : 1, time = 19
+Opterator : 5, job : 2, time = 53
+optimal time = 173

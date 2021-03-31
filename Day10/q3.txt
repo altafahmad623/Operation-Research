@@ -1,0 +1,140 @@
+Enter the number of rows and columns, i.e, the number of workers and tasks : 5
+
+Now, enter the values of the table : 
+Enter A[0][0] :57
+Enter A[0][1] :97
+Enter A[0][2] :56
+Enter A[0][3] :43
+Enter A[0][4] :0
+Enter A[1][0] :33
+Enter A[1][1] :59
+Enter A[1][2] :63
+Enter A[1][3] :97
+Enter A[1][4] :0
+Enter A[2][0] :22
+Enter A[2][1] :22
+Enter A[2][2] :33
+Enter A[2][3] :11
+Enter A[2][4] :0
+Enter A[3][0] :31
+Enter A[3][1] :45
+Enter A[3][2] :84
+Enter A[3][3] :71
+Enter A[3][4] :0
+Enter A[4][0] :98
+Enter A[4][1] :7
+Enter A[4][2] :90
+Enter A[4][3] :96
+Enter A[4][4] :0
+
+Initial Table : 
+
+---------------------------------------------
+  |     1       2       3       4       5
+---------------------------------------------
+1 |     57      97      56      43      0
+2 |     33      59      63      97      0
+3 |     22      22      33      11      0
+4 |     31      45      84      71      0
+5 |     98      7       90      96      0
+
+---------------------------------------------
+The row minima is :     0       0       0       0       0
+After subtracting row minima we get
+
+---------------------------------------------
+  |     1       2       3       4       5
+---------------------------------------------
+1 |     57      97      56      43      0
+2 |     33      59      63      97      0
+3 |     22      22      33      11      0
+4 |     31      45      84      71      0
+5 |     98      7       90      96      0
+
+---------------------------------------------
+The column minima is :  22      7       33      11      0
+
+After subtracting column minima we get
+
+---------------------------------------------
+  |     1       2       3       4       5
+---------------------------------------------
+1 |     35      90      23      32      0
+2 |     11      52      30      86      0
+3 |     0       15      0       0       0
+4 |     9       38      51      60      0
+5 |     76      0       57      85      0
+
+---------------------------------------------
+The check matrix after covering all the zeroes is : 
+0       1       0       0       1
+0       1       0       0       1
+1       1       1       1       1
+0       1       0       0       1
+0       1       0       0       1
+
+The minimum uncovered element is : 9
+This will be subtracted and added in the required cells now
+verline[j]][horline[i] = 4 ,2 
+verline[j]][horline[i] = 1 ,2 
+
+---------------------------------------------
+  |     1       2       3       4       5
+---------------------------------------------
+1 |     26      90      14      23      0
+2 |     2       52      21      77      0
+3 |     0       24      0       0       9
+4 |     0       38      42      51      0
+5 |     67      0       48      76      0
+
+---------------------------------------------
+The check matrix after covering all the zeroes is : 
+1       1       0       0       1
+1       1       0       0       1
+1       1       1       1       1
+1       1       0       0       1
+1       1       0       0       1
+
+The minimum uncovered element is : 14
+This will be subtracted and added in the required cells now
+verline[j]][horline[i] = 4 ,2 
+verline[j]][horline[i] = 0 ,2 
+verline[j]][horline[i] = 1 ,2 
+
+---------------------------------------------
+  |     1       2       3       4       5
+---------------------------------------------
+1 |     26      90      0       9       0
+2 |     2       52      7       63      0
+3 |     14      38      0       0       23
+4 |     0       38      28      37      0
+5 |     67      0       34      62      0
+
+---------------------------------------------
+The check matrix after covering all the zeroes is : 
+1       1       1       0       1
+1       1       1       0       1
+1       1       1       1       1
+1       1       1       0       1
+1       1       1       0       1
+
+Optimality has reached
+The operator is placed at the places where there is 1
+
+---------------------------------------------
+  |     1       2       3       4       5
+---------------------------------------------
+1 |     0       0       1       0       0
+2 |     0       0       0       0       1
+3 |     0       0       0       1       0
+4 |     1       0       0       0       0
+5 |     0       1       0       0       0
+
+---------------------------------------------
+That is 
+For operator 1, job = 3
+For operator 2, job = 5 // since this a dummy, so it won't be taken into account
+For operator 3, job = 4
+For operator 4, job = 1
+For operator 5, job = 2
+And the total cost is : 105

@@ -142,16 +142,16 @@ int bigM(double **A, double *B, double *C, int n, int m, int msum, int *sign, in
     }
     for (i = 0; i < (n + msum); i++)
     {
-        printf(" %0.0lf * x_%d +", cb[i], i + 1);
+        printf(" %lf * x_%d +", cb[i], i + 1);
     }
     printf("\nsubject to\n");
     for (i = 0; i < m; i++)
     {
         for (j = 0; j < (n + msum); j++)
         {
-            printf(" %0.0lf x_%d + ", sim[i][j], j + 1);
+            printf(" %lf x_%d + ", sim[i][j], j + 1);
         }
-        printf(" 0 = %0.0lf\n", sol[i]);
+        printf(" 0 = %lf\n", sol[i]);
     }
     printf("and \n");
     for (i = 0; i < (n + msum - 1); i++)
@@ -328,9 +328,9 @@ int bigM(double **A, double *B, double *C, int n, int m, int msum, int *sign, in
     }
 
     printf("\n The final optimal values are : ");
-    double*xx = new double[100]; 
-    double* yVal = new double[100]; //  this stores the optimal strategy for player B
-    double* xVal = new double[100]; //  this stores the optimal strategy for player A
+    double*xx = new double[100];
+    double* yVal = new double[100];
+    double* xVal = new double[100];
     for (i = 0; i < m; i++)
     {
         printf(" x_ %d = %lf ", basv[i] + 1, sol[i]);
@@ -354,7 +354,7 @@ int bigM(double **A, double *B, double *C, int n, int m, int msum, int *sign, in
     //cout<<"And the value of the game is : "<<value<<"\n";
     return 0;
 }
-int minArray(int *a, int n) // helper function to find the min max 
+int minArray(int *a, int n)
 {
     int min = bM, k;
     for (int i = 0; i < n; i++)
@@ -367,7 +367,7 @@ int minArray(int *a, int n) // helper function to find the min max
     }
     return k;
 }
-void printTable(int **arr, int n, int m, int *rowmin, int *columnmax) // helper function to print the table 
+void printTable(int **arr, int n, int m, int *rowmin, int *columnmax)
 {
     cout << "\n";
     cout << "\t\tB's Strategy\n\t";
@@ -419,59 +419,7 @@ void printTable(int **arr, int n, int m, int *rowmin, int *columnmax) // helper 
     }
     cout << "\n";
 }
-void printTable(double **arr, int n, int m, int *rowmin, int *columnmax) // overload the table to get it
-{
-    cout << "\n";
-    cout << "\t\tB's Strategy\n\t";
-    for (int i = 0; i < n; i++)
-    {
-        cout << "------------";
-    }
-    cout << "\n\t    |";
-    for (int i = 1; i <= n; i++)
-    {
-        cout << "\tb_" << i;
-    }
-    cout << "\tRow min\n\t";
-    for (int i = 0; i < n; i++)
-    {
-        cout << "------------";
-    }
-    cout << "\nA's ";
-    for (int i = 0; i < m; i++)
-    {
-        if (i == 0)
-        {
-            cout << "Str";
-        }
-        if (i == 1)
-        {
-            cout << "at";
-        }
-        if (i == 2)
-        {
-            cout << "egy";
-        }
-        cout << "\ta_" << i + 1 << " |\t";
-        for (int j = 0; j < n; j++)
-        {
-            cout << arr[i][j] << "\t";
-        }
-        cout << rowmin[i] << "\n";
-    }
-    cout << "\t";
-    for (int i = 0; i < n; i++)
-    {
-        cout << "------------";
-    }
-    cout << "\nCol Max\t";
-    for (int i = 0; i < n; i++)
-    {
-        cout << "\t" << columnmax[i];
-    }
-    cout << "\n";
-}
-int stable_game(int **arr, int n, int m) // this function calculates the min max and max min and checks if the game is stable
+int stable_game(int **arr, int n, int m)
 {
     double **A = new double *[100];
     for (int i = 0; i < 100; i++)
@@ -488,7 +436,7 @@ int stable_game(int **arr, int n, int m) // this function calculates the min max
         for (int j = 0; j < n; j++)
         {
             A[i][j] = arr[i][j];
-            if (A[i][j] < minpk) // finds the minimum of all rows
+            if (A[i][j] < minpk)
             {
                 minpk = A[i][j];
             }
@@ -501,7 +449,7 @@ int stable_game(int **arr, int n, int m) // this function calculates the min max
         minpk = -bM;
         for (int i = 0; i < m; i++)
         {
-            if (arr[i][j] > minpk) // finds the maximum of all columns
+            if (arr[i][j] > minpk)
             {
                 minpk = arr[i][j];
             }
@@ -509,31 +457,19 @@ int stable_game(int **arr, int n, int m) // this function calculates the min max
         columnmax[j] = minpk;
     }
     printTable(arr, n, m, rowmin, columnmax);
-    int maxmin = maxArray(rowmin, m); // maxmin is the maximum element of all the minimum rows
-    int minmax = minArray(columnmax, n), k1, k2; // and minmax is the minimum element of all the maximum columns
-    int minmin = minArray(rowmin, m);
-    int k3 = rowmin[minmin];
+    int maxmin = maxArray(rowmin, m);
+    int minmax = minArray(columnmax, n), k1, k2;
     k1 = rowmin[maxmin];
     k2 = columnmax[minmax];
     cout << "\n Max-Min = " << k1 << " , and Min-Max = " << k2 << "\n";
-    if (k1 == k2) // if the game is stable
+    if (k1 == k2)
     {
-        cout << "This game has a saddle point (game is stable) at (" << maxmin + 1 << " , " << minmax + 1 << ") and the value of the game = " << rowmin[maxmin] << "\n";
+        cout << "This game has a saddle point at (" << maxmin + 1 << " , " << minmax + 1 << ") and the value of the game = " << rowmin[maxmin] << "\n";
     }
-    else // the game is not stable 
+    else
     {
-        int c;
-        cout << "This game does not possess a saddle point (game is unstable)\nThe value of the game will lie between " << k1 << " and " << k2 << "\n";
-        if(k3 < 0 )
-        {
-            c = (-1) * k3;
-        }
-        else
-        {
-            c = 0;
-        }
-        
-        cout << "We are adding " << c << " to each element of the table \n"; // this is done to remove the negative elements if any
+        cout << "This game does not possess a saddle point\nThe value of the game will lie between " << k1 << " and " << k2 << "\n";
+        int c = k2 + 2;
         for (int i = 0; i < m; i++)
         {
             for (int j = 0; j < n; j++)
@@ -541,7 +477,6 @@ int stable_game(int **arr, int n, int m) // this function calculates the min max
                 A[i][j] += c;
             }
         }
-        printTable(A, n, m, rowmin, columnmax);
         //int bigM(double **A, double *B, double *C, int n, int m, int msum, int *sign, int maxmin) 
         double * B = new double[100];
         for (int i = 0; i < m; i++)
@@ -558,7 +493,7 @@ int stable_game(int **arr, int n, int m) // this function calculates the min max
         {
             sign[i] = 0;
         }
-        bigM(A,B,C,n,m,n,sign, 0, c); // now after modifying the table, we move on to the linear programming problem and solve it using simplex method
+        bigM(A,B,C,n,m,n,sign, 0, c);
     }
 }
 int main()
@@ -583,5 +518,4 @@ int main()
         }
     }
     int value = stable_game(A, n, m);
-    return 0;
 }

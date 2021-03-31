@@ -7,9 +7,15 @@ Assingment problem using the  The Hungarian algorithm
 using namespace std;
 #define lli long long
 #define bM 1000000.0
-void printTable(int **arr, int n) // helper function to print the table 
+void printTable(int **arr, int n)
 {
     cout << "\n";
+    for (int i = 0; i < n; i++)
+    {
+        cout << "---------";
+    }
+    cout << "\n";
+    cout << "\t\tWorkers\n";
     for (int i = 0; i < n; i++)
     {
         cout << "---------";
@@ -41,7 +47,7 @@ void printTable(int **arr, int n) // helper function to print the table
     }
     cout << "\n";
 }
-int hungarian(int **arr, int n) // method to implement the  hungarian method
+int hungarian(int **arr, int n)
 {
     int **A = new int *[100];
     for (int i = 0; i < 100; i++)
@@ -147,28 +153,14 @@ int hungarian(int **arr, int n) // method to implement the  hungarian method
                 if (A[i][j] == 0)
                 {
                     numzeroes++;
-                }
-            }
-            if (numzeroes == 1)
-            {
-
-                for (int j = 0; j < n; j++)
-                {
-                    if (checkmatrix[i][j])
+                    numsquares++;
+                    operator1[i][j] = 1;
+                    verline.push_back(j);
+                    for (int lm = 0; lm < n; lm++)
                     {
-                        continue;
+                        checkmatrix[lm][j] = 1;
                     }
-                    if (A[i][j] == 0)
-                    {
-                        numsquares++;
-                        operator1[i][j] = 1;
-                        verline.push_back(j);
-                        for (int lm = 0; lm < n; lm++)
-                        {
-                            checkmatrix[lm][j] = 1;
-                        }
-                        break;
-                    }
+                    break;
                 }
             }
         }
@@ -183,92 +175,16 @@ int hungarian(int **arr, int n) // method to implement the  hungarian method
                 if (A[i][j] == 0)
                 {
                     numzeroes++;
+                    numsquares++;
+                    operator1[i][j] = 1;
+                    horline.push_back(i);
+                    for (int lm = 0; lm < n; lm++)
+                    {
+                        checkmatrix[i][lm] = 1;
+                    }
+                    break;
                 }
             }
-            if (numzeroes == 1)
-            {
-                for (int i = 0; i < n; i++)
-                {
-                    if (checkmatrix[i][j])
-                    {
-                        continue;
-                    }
-                    if (A[i][j] == 0)
-                    {
-                        numsquares++;
-                        operator1[i][j] = 1;
-                        horline.push_back(i);
-                        for (int lm = 0; lm < n; lm++)
-                        {
-                            checkmatrix[i][lm] = 1;
-                        }
-                        break;
-                    }
-                }
-            }
-        }
-        numzeroes = 0;
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                if (checkmatrix[i][j])
-                {
-                    continue;
-                }
-                if (A[i][j] == 0)
-                    numzeroes++;
-            }
-        }
-        if (numzeroes)
-        {
-            
-            for (int i = 0; i < n; i++)
-            {
-                numzeroes = 0;
-                for (int j = 0; j < n; j++)
-                {
-                    if (checkmatrix[i][j])
-                    {
-                        continue;
-                    }
-                    if (A[i][j] == 0)
-                    {
-                        numzeroes++;
-                        numsquares++;
-                        operator1[i][j] = 1;
-                        verline.push_back(j);
-                        for (int lm = 0; lm < n; lm++)
-                        {
-                            checkmatrix[lm][j] = 1;
-                        }
-                        break;
-                    }
-                }
-            }
-            //now do the column scanning
-            for (int j = 0; j < n; j++)
-            {
-                numzeroes = 0;
-                for (int i = 0; i < n; i++)
-                {
-                    if (checkmatrix[i][j])
-                        continue;
-                    if (A[i][j] == 0)
-                    {
-                        numzeroes++;
-                        numsquares++;
-                        operator1[i][j] = 1;
-                        horline.push_back(i);
-                        for (int lm = 0; lm < n; lm++)
-                        {
-                            checkmatrix[i][lm] = 1;
-                        }
-                        break;
-                    }
-                }
-            }
-            //numsquares = n;
         }
         cout << "The check matrix after covering all the zeroes is : \n";
         for (int i = 0; i < n; i++)
@@ -280,7 +196,6 @@ int hungarian(int **arr, int n) // method to implement the  hungarian method
             }
             cout << "\n";
         }
-
         cout << "\n";
         if (numsquares == n)
         {
@@ -290,7 +205,7 @@ int hungarian(int **arr, int n) // method to implement the  hungarian method
             cout << "That is \n";
             for (int i = 0; i < n; i++)
             {
-                cout << "For operator " << i + 1 << ", job = ";
+                cout << "For job " << i + 1 << ", operator = ";
                 for (int j = 0; j < n; j++)
                 {
                     if (operator1[i][j])
@@ -303,7 +218,7 @@ int hungarian(int **arr, int n) // method to implement the  hungarian method
             cout << "And the total cost is : " << total << "\n";
             return total;
         }
-        else // otherwise, the minimum non covered value is chosen 
+        else
         {
             int cx, cy;
             minpk = bM;
@@ -315,7 +230,7 @@ int hungarian(int **arr, int n) // method to implement the  hungarian method
                         continue;
                     if (A[i][j] < minpk)
                     {
-                        minpk = A[i][j]; // this finds the minimum non covered value
+                        minpk = A[i][j];
                     }
                 }
             }
@@ -324,14 +239,14 @@ int hungarian(int **arr, int n) // method to implement the  hungarian method
                 for (int j = 0; j < verline.size(); j++)
                 {
                     cout << "verline[j]][horline[i] = " << verline[j] << " ," << horline[i] << " \n";
-                    A[horline[i]][verline[j]] += minpk; // the places where hor and vertical lines are drawn, the minimum value is added
+                    A[horline[i]][verline[j]] += minpk;
                 }
             }
             for (int i = 0; i < n; i++)
             {
                 for (int j = 0; j < n; j++)
                 {
-                    if (checkmatrix[i][j]) // while it is reduced in the non covered cases
+                    if (checkmatrix[i][j])
                         continue;
                     A[i][j] -= minpk;
                 }

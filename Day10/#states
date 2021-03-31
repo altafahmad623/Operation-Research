@@ -1,0 +1,47 @@
+#states
+F_0
+F_1
+F_2
+s3
+#initial
+F_0
+#accepting
+
+#alphabet
+a
+b
+c
+U
+D
+b0
+b1
+b2
+#transitions
+F_0:U>F_1
+F_0:D>F_0
+F_0:b0>F_0
+F_0:b1>F_1
+F_0:b2>F_2
+
+F_1:U>F_2
+F_1:D>F_0
+F_1:b0>F_0
+F_1:b1>F_1
+F_1:b2>F_2
+
+F_2:U>F_2
+F_2:D>F_1
+F_2:b0>F_0
+F_2:b1>F_1
+F_2:b2>F_2
+
+
+Here, F_0, F_1, and F_2 are the three floors.
+for inputs, 
+    U - up button on elevator 
+    D - down button on elevator 
+    b0 - button on ground floor
+    b1 - button on 1st floor
+    b2 - button on 2nd floor
+
+Output will be 
