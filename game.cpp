@@ -543,17 +543,17 @@ int stable_game(int **arr, int n, int m) // this function calculates the min max
         }
         printTable(A, n, m, rowmin, columnmax);
         //int bigM(double **A, double *B, double *C, int n, int m, int msum, int *sign, int maxmin) 
-        double * B = new double[100];
+        double * B = new double[m];
         for (int i = 0; i < m; i++)
         {
             B[i] = 1.0;
         }
-        double * C = new double[100];
+        double * C = new double[n];
         for (int i = 0; i < n; i++)
         {
             C[i] = 1.0;
         }
-        int * sign = new int[100];
+        int * sign = new int[m];
         for (int i = 0; i < m; i++)
         {
             sign[i] = 0;

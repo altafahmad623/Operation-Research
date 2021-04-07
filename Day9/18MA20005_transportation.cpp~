@@ -765,11 +765,10 @@ int main()
         }
     }
 
-
-    printTable(a, b, c, m, n, x);
-    LeastCostCellMethod(a, b, c, m, n, x);
     printTable(a, b, c, m, n, x);
     northWestCorner(a, b, c, m, n, x);
+    printTable(a, b, c, m, n, x);
+    LeastCostCellMethod(a, b, c, m, n, x);
     cout << "Phase 1 is complete and now we have to move to phase II. This is the table we got after phase I \n";
     printTable(a, b, c, m, n, x);
     MODIoptim(a, b, c, m, n, x);
